@@ -65,6 +65,10 @@ public class AlunoController {
 	public List<Aluno> findAlunosPorNome(@PathVariable String nome){
 		return alunoService.findByNome(nome);
 	}
+	@GetMapping("/turma/{turmaId}")
+	public List<Aluno> findAlunosPorTurma(@PathVariable String turmaId){
+		return alunoService.findByTurmaId(turmaId);
+	}
 	@GetMapping("nome-completo/{nomeCompleto}")
 	public List<Aluno> findAlunosPorNomeCompletoLike(@PathVariable String nomeCompleto){
 		return alunoService.findByNomeCompletoLike(nomeCompleto);
